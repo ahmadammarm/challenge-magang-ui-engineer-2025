@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Obito - Sign Up Screen Design</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: "#2f6a62",
+							secondary: "#6a6f7c",
+							dark: "#0a0723",
+							lightgray: "#d9d9d9",
+							lightbg: "#f8faf9",
+							bordergray: "#eaecee",
+						},
+					},
+				},
+			};
+		</script>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+			body {
+				font-family: "Poppins", sans-serif;
+			}
+		</style>
+	</head>
+	<body class="bg-lightbg min-h-screen">
+		<header class="w-full py-4 bg-white border-b border-bordergray">
+			<div class="container mx-auto px-8 max-w-7xl">
+				<div class="flex items-center justify-between">
+					<div class="flex items-center gap-8">
+						<a href="/" class="flex items-center">
+							<img
+								src="/assets/logo.png"
+								alt="Obito Logo"
+								class="w-8 h-8 object-cover"
+							/>
+							<span class="font-bold text-xl ml-2 mr-4 text-dark">Obito</span>
+						</a>
+						<nav class="hidden md:flex items-center gap-12">
+							<a href="/" class="text-dark font-bold">Home</a>
+							<a href="/pricing" class="text-secondary">Pricing</a>
+							<a href="/features" class="text-secondary">Features</a>
+							<a href="/testimonials" class="text-secondary">Testimonials</a>
+						</nav>
+					</div>
+					<div class="flex items-center gap-8">
+						<button class="text-secondary p-2">
+							<i class="fa-regular fa-bell text-2xl"></i>
+						</button>
+						<div class="w-0.5 h-14 bg-bordergray"></div>
+						<a
+							href="#"
+							class="text-dark font-medium hidden md:block px-8 py-4 rounded-full border"
+							>Sign Up</a
+						>
+						<a
+							href="#"
+							class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full"
+							>My Account</a
+						>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="container mx-auto px-4 py-8 max-w-7xl">
+			<div class="grid md:grid-cols-2 gap-8 items-start">
+				<div class="bg-white p-8 rounded-lg shadow-sm border border-bordergray">
+					<h1 class="text-2xl font-bold text-dark mb-6">Upgrade Your Skills</h1>
+
+					<div class="space-y-6">
+						<div class="flex justify-start mb-6">
+							<button
+								class="w-24 h-24 rounded-full border-2 border-dashed border-lightgray flex flex-col items-center justify-center text-secondary"
+							>
+								<span class="text-sm font-medium">Add</span>
+								<span class="text-sm font-medium">Photo</span>
+							</button>
+						</div>
+
+						<div class="space-y-2">
+							<label for="name" class="block text-dark font-medium"
+								>Complete Name</label
+							>
+							<div class="relative">
+								<i
+									class="fa-regular fa-user absolute left-3 top-3 text-secondary ml-3"
+								></i>
+								<input
+									id="name"
+									placeholder="Type your valid email address"
+									class="w-full pl-10 pr-4 py-2 ml-2 border border-lightgray rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+								/>
+							</div>
+						</div>
+
+						<div class="space-y-2">
+							<label for="occupation" class="block text-dark font-medium"
+								>Occupation</label
+							>
+							<div class="relative">
+								<i
+									class="fa-solid fa-briefcase absolute left-3 top-3 text-secondary z-10 ml-3"
+								></i>
+								<div class="relative">
+									<select
+										class="appearance-none w-full pl-10 pr-10 py-2 ml-2 border border-lightgray rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white font-bold"
+									>
+										<option>Programmer</option>
+										<option>Designer</option>
+										<option>Manager</option>
+									</select>
+									<i
+										class="fa-solid fa-chevron-down absolute right-3 top-3 text-secondary pointer-events-none"
+									></i>
+								</div>
+							</div>
+						</div>
+
+						<div class="space-y-2">
+							<label for="email" class="block text-dark font-medium"
+								>Email Address</label
+							>
+							<div class="relative">
+								<i
+									class="fa-regular fa-envelope absolute left-3 top-3 text-secondary ml-3"
+								></i>
+								<input
+									id="email"
+									type="email"
+									placeholder="Type your valid email address"
+									class="w-full pl-10 pr-4 py-2 ml-2 border border-lightgray rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+								/>
+							</div>
+						</div>
+
+						<div class="space-y-2">
+							<label for="password" class="block text-dark font-medium"
+								>Password</label
+							>
+							<div class="relative">
+								<i
+									class="fa-solid fa-lock absolute left-3 top-3 text-secondary ml-3"
+								></i>
+								<input
+									id="password"
+									type="password"
+									placeholder="Type your valid email address"
+									class="w-full pl-10 pr-10 py-2 ml-2 border border-lightgray rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+								/>
+							</div>
+						</div>
+
+						<div class="space-y-2">
+							<label for="confirmPassword" class="block text-dark font-medium"
+								>Confirm Password</label
+							>
+							<div class="relative">
+								<i
+									class="fa-solid fa-lock absolute left-3 top-3 text-secondary ml-3"
+								></i>
+								<input
+									id="confirmPassword"
+									type="password"
+									placeholder="Type your valid email address"
+									class="w-full pl-10 pr-10 py-2 ml-2 border border-lightgray rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+								/>
+							</div>
+						</div>
+
+						<button
+							class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-full font-medium"
+						>
+							Create My Account
+						</button>
+					</div>
+				</div>
+
+				<div class="hidden md:block">
+					<img
+						src="/assets/banner.png"
+						alt="People working at computers"
+						class="w-full h-auto rounded-lg object-cover"
+					/>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
